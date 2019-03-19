@@ -1,0 +1,103 @@
+<div class="modal"  *ngIf = "viewModal === true" >
+    <app-direction-view-modal></app-direction-view-modal>
+  </div>
+  <div class="modal" *ngIf ="editModal === true" >
+      <app-direction-edit-modal></app-direction-edit-modal>
+  </div>
+  <div class="modal" *ngIf ="addModal === true" >
+        <app-direction-add-modal></app-direction-add-modal>
+  </div>
+  <div class="table-title">
+      <div class="table-header">
+          <button class="add" type="button" (click)="onAddItem(direction)">add</button>
+            <div class="search container">
+                <input  placeholder="Search" [(ngModel)]="searchText" class="search input" >
+            </div>
+          </div>
+   
+  
+    <table class="table-fill">
+    <thead>
+        <tr>
+          <th class="text-left">
+            <h1>Id</h1>
+          </th>
+          <th class="text-left">
+            <h1>Name</h1>
+          </th>
+          <th class="text-left">
+            <h1>StartDate</h1>
+          </th>
+          <th class="text-left">
+            <h1>UpdateDate</h1>
+          </th>
+          <th class="text-left">
+            <h1>Photo</h1>
+          </th>
+          <th class="text-left">
+            <h1>Options</h1>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let direction of pagedItems
+                     | filter: {direction: searchText, name:searchText, startDate: searchText,updateDate: searchText,photo: searchText} ;
+                     let i = index ">
+      <td class="text-left">{{i+1}}</td>
+      <td class="text-left">{{direction.value.name}}</td>
+      <td class="text-left">{{direction.value.startDate}}</td> 
+      <td class="text-left">{{direction.value.updateDate}}</td> 
+      <td class="text-left">{{direction.value.photo}}</td> 
+      <td class="button-td"><button 
+            (click)="onViewItem(direction)"
+            class="btn">
+              view
+          </button>
+          <button 
+            (click)="onEditItem(direction)"
+            class="btn">
+              edit
+            </button>
+          <button 
+            (click)="ondeleteDirection(direction)"
+            class="btn">
+            delete
+          </button>
+          </td>
+        </tr>
+    </table>
+    <div *ngIf="pager.pages && pager.pages.length" class="paginations">
+      <div class="pagination-back">
+        <button class="button-pagination-first" [disabled]="pager.currentPage === 1 " (click)="setPage(1)">
+          <a>First</a>
+        </button>
+        <button class="button-pagination" [disabled]="pager.currentPage === 1 " (click)="setPage(pager.currentPage - 1)">
+          <a>&laquo;</a>
+        </button>
+        <button class="button-pagination" *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}"
+          (click)="setPage(page)">
+          <a>{{page}}</a>
+        </button>
+        <button class="button-pagination" [disabled]="pager.currentPage === pager.totalPages" (click)="setPage(pager.currentPage + 1)">
+          <a>&raquo;</a>
+        </button>
+        <button class="button-pagination-last" [disabled]="pager.currentPage === pager.totalPages" (click)="setPage(pager.totalPages)">
+          <a>Last</a>
+        </button>
+        <select
+        [ngModel]="selection"
+        (ngModelChange)="onChange($event, selection)">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5" selected>5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+    </div>
+  </div>

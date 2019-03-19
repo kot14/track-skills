@@ -1,0 +1,71 @@
+.row {
+  width: 160px;
+  height: 100%;
+  background-color: #2c445a;
+}
+
+.fa-user-tie,
+.fa-atlas,
+.fa-sitemap,
+.fa-search-location,
+.fa-ban {
+  width: 20px;
+  color: #848484;
+}
+
+.fa-user-tie .active {
+  color: red;
+}
+
+.row-wrapper {
+  padding-left: 10px;
+  border-bottom: 2px solid rgba(107, 108, 109, 0.19);
+}
+
+.row-wrapper button {
+  line-height: 50px;
+  text-decoration: none;
+  outline: none;
+  text-align: start;
+  color: rgba(255, 255, 255, 0.47);
+  background: transparent;
+  text-shadow: none;
+  width: 85%;
+  font-size: 14px;
+  border: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.row-wrapper:hover {
+  background-color: #233342;
+}
+
+.active {
+  background-color: #233342 !important;
+}
+
+.active button {
+  color: #fff !important;
+}
+
+.active .fa-user-tie {
+  color: #ffffff;
+}
+
+.active .fa-atlas {
+  color: rgb(1, 202, 1);
+}
+
+.active .fa-sitemap {
+  color: yellow;
+}
+
+.active .fa-search-location {
+  color: blueviolet;
+}
+
+.active .fa-ban {
+  color: red;
+}

@@ -1,0 +1,91 @@
+<div class="row">
+        
+        <div class="table">
+          <form [formGroup]="formDirectionGroup" (ngSubmit)="onSubmit()">
+            <div class="conteiner">
+                <!-- <div class="col">
+                    <span>id</span>
+                        <ul>       
+                            <input
+                            type="number"
+                            formControlName="id"
+                            
+                            [ngModel]="viewTech.value.id"
+                           >
+                        </ul>
+                </div> -->
+                <div class="col">
+                    <span>name</span>
+                        <ul >      
+                            <input
+                            type="text"
+                            
+                            formControlName="name"
+                            
+                            [ngModel]="viewDirection.value.name"
+                            >
+                        </ul>
+                </div>           
+                <!-- <div class="col">
+                    <span>nameDirection</span>
+                        <ul >
+                            <input
+                            
+                            id="nameDirection"
+                            formControlName="nameDirection"
+                            
+                            [ngModel]="viewTech.value.nameDirection"
+                            >
+                        </ul>
+                </div> -->
+            </div>  
+            <div class="conteiner"> 
+                <div class="col">
+                    <span>startDate</span>
+                        <ul >
+                            <input
+                            type="number"
+                            
+                            formControlName="startDate"
+                            
+                            [ngModel]="viewDirection.value.startDate"
+                            >
+                        </ul>
+                </div>
+                <div class="col">
+                    <span>updateDate</span>
+                        <ul >
+                            <input
+                            type="number"
+                            
+                            formControlName="updateDate"
+                            
+                            [ngModel]="viewDirection.value.updateDate"
+                            >
+                        </ul>
+                </div>
+                <div class="col">
+                    <span>photo</span>
+                        <ul >
+                            <input
+                                type="text"
+                                
+                                formControlName="photo"
+                                
+                                [ngModel]="viewDirection.value.photo"
+                                >
+                        </ul>
+                </div>
+            </div>
+            <div class="conteiner-button">
+                <button type="button" (click)="onCloseModal();">Close</button>
+                <button 
+                type="submit">
+                Edit
+                </button>
+            </div>
+        </form>
+            
+            </div>
+          </div>
+        

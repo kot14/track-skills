@@ -1,0 +1,93 @@
+<div class="row">
+        
+  <div class="table">
+    <form [formGroup]="formTechGroup" (ngSubmit)="onSubmit()">
+      <div class="conteiner">
+          <!-- <div class="col">
+              <span>id</span>
+                  <ul>       
+                      <input
+                      type="number"
+                      formControlName="id"
+                      
+                      [ngModel]="viewTech.value.id"
+                     >
+                  </ul>
+          </div> -->
+          <div class="col">
+              <span>name</span>
+                  <ul >      
+                      <input
+                      type="text"
+                      
+                      formControlName="name"
+                      
+                      [ngModel]="viewTech.value.name"
+                      >
+                  </ul>
+          </div>           
+          <div class="col">
+              <span>nameDirection</span>
+                  <ul >
+                      <input
+                      
+                      id="nameDirection"
+                      formControlName="nameDirection"
+                      
+                      [ngModel]="viewTech.value.nameDirection"
+                      >
+                  </ul>
+          </div>
+      </div>  
+      <div class="conteiner"> 
+          <div class="col">
+              <span>startDate</span>
+                  <ul >
+                      <input
+                      type="number"
+                      
+                      formControlName="startDate"
+                      
+                      [ngModel]="viewTech.value.startDate"
+                      >
+                  </ul>
+          </div>
+          <div class="col">
+              <span>updateDate</span>
+                  <ul >
+                      <input
+                      type="number"
+                      
+                      formControlName="updateDate"
+                      
+                      [ngModel]="viewTech.value.updateDate"
+                      >
+                  </ul>
+          </div>
+          <div class="col">
+              <span>photo</span>
+                  <ul >
+                      <input
+                          type="text"
+                          
+                          formControlName="photo"
+                          
+                          [ngModel]="viewTech.value.photo"
+                          >
+                  </ul>
+          </div>
+      </div>
+      <div class="conteiner-button">
+          <button type="button" (click)="onCloseModal();">Close</button>
+          <button 
+          type="submit"
+          
+
+          >Edit
+          </button>
+      </div>
+  </form>
+      
+      </div>
+    </div>
+  

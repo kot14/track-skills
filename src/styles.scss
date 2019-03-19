@@ -1,0 +1,187 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.42em;
+  background-color: #1F2739;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.page-wrappe {
+  margin: 15px 20px 0px 20px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  border: 1.3px solid #b8b8b8;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+}
+
+body {
+  height: 100%;
+  font-family: "Poppins";
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+
+label {
+  margin-top: 5px;
+  font-size: 25px;
+}
+
+.add {
+  background-color: #E0FFFF;
+  border-radius: 25px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  margin-top: 5px;
+}
+
+.add:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.edit {
+  background-color: #ADD8E6;
+  border-radius: 25px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.edit:hover {
+  background-color: #0000CD;
+  color: white;
+}
+
+.delete {
+  background-color: #FF7F50;
+  border-radius: 25px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.delete:hover {
+  background-color: red;
+  color: white;
+}
+
+.view {
+  background-color: #A9A9A9;
+  border-radius: 25px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.view:hover {
+  background-color: #696969;
+  color: white;
+}
+
+.fa-street-view {
+  font-size: 18px;
+}
+
+.fa-edit {
+  font-size: 16px;
+}
+
+.fa-trash {
+  font-size: 16px;
+}
+
+.pagination {
+  clear: both;
+}
+
+.pagination ul {
+  text-align: right;
+  margin-right: 40px;
+  margin-bottom: 0;
+  margin-top: 0px;
+}
+
+.pagination ul button li {
+  display: inline-block;
+  margin: 0 1px;
+  vertical-align: middle;
+  line-height: 12px;
+  padding: 2px 6px;
+}
+
+.pagination ul button li a,
+.pagination ul button li span {
+  color: #696969;
+  text-decoration: none;
+}
+
+table {
+  background-color: #008080;
+  margin-top: 10px;
+  margin-left: 15px;
+  table-layout: fixed;
+  width: 100%;
+}
+
+th {
+  height: 30px;
+  font-family: 'Poppins';
+  background-color: #2C3446;
+  color: #185875;
+  font-size: 14px;
+}
+
+td {
+  font-family: 'Poppins';
+  text-align: center;
+  color: 343a45;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-width: 1px 1px 1px 2px;
+  border-color: #777;
+  background-color: #aaa;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-width: 1px 1px 1px 2px;
+  border-color: #555;
+  background-color: #777;
+}
+
+::-webkit-scrollbar-track {
+  border-width: 0;
+}
+
+::-webkit-scrollbar-track:hover {
+  border-left: solid 1px #aaa;
+  background-color: #eee;
+}
+
+.table-name {
+  position: absolute;
+  display: flex;
+  padding-top: 10px;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.first {
+  margin-right: 5px;
+}

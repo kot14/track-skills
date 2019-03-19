@@ -1,0 +1,15 @@
+<div class="page-wrapper">
+  <div class="header">
+    <div class="panel">
+      <span class="btn" [routerLink]="['user-list']"><i class="fa fa-home"></i> Home</span>
+      <button class="toggle" (click)="toggleMenu()"><i class="fas fa-align-justify"></i></button>
+    </div>
+    <button class="logout" (click)="logOut()"><i class="fas fa-sign-out-alt"></i>Logout</button>
+  </div>
+  <div class="row">
+    <div class="buttons">
+      <app-sidebar class="animation" *ngIf="adminService.showMenu" [@EnterLeave]="'flyOut'" style="height: 100vh"></app-sidebar>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,92 @@
+<div class="row">       
+  <div class="table">
+    <form> 
+      <div class="conteiner">
+        <!-- <div class="col">
+            <span>id</span>
+                <ul>       
+                    <input
+                    type="text"
+                    id="id"
+                    name="id"
+                    disabled
+                    [ngModel]="viewTech.value.id"
+                    >
+                </ul>
+        </div> -->
+          <div class="col">
+              <span>name</span>
+                  <ul form-group>      
+                      <input
+                      type="text"
+                      id="name"
+                      class="form-control"
+                      name="name"
+                      disabled
+                      [ngModel]="viewTech.value.name"
+                      >
+                  </ul>
+          </div>           
+          <div class="col">
+              <span>nameDirection</span>
+                  <ul form-group>
+                      <input
+                      type="text"
+                      id="nameDirection"
+                      class="form-control"
+                      name="nameDirection"
+                      disabled
+                      [ngModel]="viewTech.value.nameDirection"
+                      >
+                  </ul>
+          </div>
+      </div>  
+      <div class="conteiner"> 
+          <div class="col">
+              <span>startDate</span>
+                  <ul form-group>
+                      <input
+                      type="number"
+                      id="startDate"
+                      class="form-control"
+                      name="startDate"
+                      disabled
+                      [ngModel]="viewTech.value.startDate"
+                      >
+                  </ul>
+          </div>
+          <div class="col">
+              <span>updateDate</span>
+                  <ul form-group>
+                      <input
+                      type="number"
+                      id="updateDate"
+                      class="form-control"
+                      name="updateDate"
+                      disabled
+                      [ngModel]="viewTech.value.updateDate"
+                     >
+                  </ul>
+          </div>
+          <div class="col">
+              <span>photo</span>
+                  <ul form-group>
+                      <input
+                          type="text"
+                          id="photo"
+                          class="form-control"
+                          name="photo"
+                          disabled
+                          [(ngModel)]="viewTech.value.photo"
+                          >
+                  </ul>
+          </div>
+      </div>
+      <div class="conteiner-button">
+          <button type="button" (click)="onCloseModal();">Close</button>
+      </div>
+  </form>
+      
+      </div>
+    </div>
+  

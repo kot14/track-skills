@@ -1,0 +1,122 @@
+.image1 {
+  max-height: 1500px;
+  height: 1000px;
+  background-image: linear-gradient(to bottom right, #000001, #2C3446);
+  font-family: sans-serif;
+}
+
+.loginbox {
+  width: 320px;
+  background: #2C3446;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.loginbox p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.loginbox input {
+  width: 100%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff !important;
+}
+
+
+button {
+  outline: none;
+}
+
+
+.loginbox input[type="text"],
+input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.form-help-text {
+  color: #fb494d;
+  font-size: 15px;
+  display: block;
+  margin-top: 15px;
+}
+
+.form-help-text-error {
+  color: #fb494d;
+  font-size: 15px;
+  display: block;
+}
+
+
+.submitButton[disabled] {
+  height: 40px;
+  width: 260px;
+  margin-top: 15px;
+  border: none;
+}
+
+.submitButton[disabled]:hover {
+  cursor: not-allowed;
+  background-color: #e84118;
+  border: none;
+}
+
+.submitButton {
+  height: 40px;
+  width: 260px;
+  margin-top: 15px;
+  transition: 0.5s;
+  background-color: #008080;
+  color: #fff;
+  border: none;
+}
+
+.submitButton:hover {
+  cursor: pointer;
+  background-color: #4cd137;
+  color: white;
+  border: none;
+}
+
+
+.loginbox a {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+  color: darkgrey;
+}

@@ -1,0 +1,85 @@
+<div class="row">
+        
+    <div class="table">
+      <form [formGroup]="formTechGroup" (ngSubmit)="onSubmit(formTechGroup)" >
+        <div class="conteiner">
+            <!-- <div class="col">
+                <span>id</span>
+                    <ul form-group>       
+                        <input
+                        type="number"                      
+                        formControlName="id"
+                        value="{{i+1}}"
+                        class="InputControl"                   
+                        >
+                    </ul>
+            </div> -->
+            <div class="col">
+                <span>name</span>
+                    <ul form-group>      
+                        <input
+                        type="text"                     
+                        formControlName="name"
+                        class="InputControl"     
+                        >
+                    </ul>
+            </div>           
+            <!-- <div class="col">
+                <span>nameDirection</span>
+                    <ul form-group>
+                        <input
+                        type="text"                      
+                        formControlName="nameDirection"
+                        class="InputControl"                     
+                        >
+                    </ul>
+            </div> -->
+        </div>  
+        <div class="conteiner"> 
+            <div class="col">
+                <span>startDate</span>
+                    <ul form-group>
+                        <input
+                        type="number"                     
+                        class="InputControl"
+                        formControlName="startDate"                      
+                        >
+                    </ul>
+            </div>
+            <div class="col">
+                <span>updateDate</span>
+                    <ul form-group>
+                        <input
+                        type="number"                     
+                        class="InputControl"
+                        formControlName="updateDate"                   
+                      >
+                    </ul>
+            </div>
+            <div class="col">
+                <span>photo</span>
+                    <ul form-group>
+                        <input
+                            type="text"
+                            class="InputControl"
+                            formControlName="photo"
+                            >
+                    </ul>
+            </div>
+        </div>
+        <div class="conteiner-button">
+            <button type="button" (click)="onCloseModal('custom-modal-3');">Close</button>
+            <button 
+            class="onSubmitButtom"
+            (click)="onSubmit()"
+            (click)="onCloseModal('custom-modal-3')"
+           [disabled]="formTechGroup.invalid"
+            >Add 
+            </button>
+        </div>
+    </form>
+        
+        </div>
+      </div>
+    
+  

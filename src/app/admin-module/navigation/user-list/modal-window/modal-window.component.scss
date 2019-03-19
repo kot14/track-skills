@@ -1,0 +1,185 @@
+.modal {
+  position: fixed;
+  left: 35%;
+  right: 35%;
+  top: 50px;
+  width: 30%;
+  height: 25rem;
+  z-index: 20;
+
+  .modal-body {
+    position: absolute;
+    justify-content: center;
+    width: 95%;
+    height: 95%;
+    padding: 2rem;
+    background-color: #008080;
+    border-radius: 2%;
+    border: 5px solid #2C3446;
+    /* margin exposes part of the modal background */
+  }
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.75;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+:host /deep/ .Input-view {
+  width: 80%;
+  // height: 3rem;
+  background-color: #2C3446;
+  color: #fff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-top-color: #2C3446;
+  outline: none;
+  margin-bottom: 15x;
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+:host /deep/ .InputControl {
+  width: 80%;
+  // height: 3rem;
+  background-color: #2C3446;
+  color: #fff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-top-color: #2C3446;
+  outline: none;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+:host /deep/ .p-control {
+  width: 20%;
+  height: 2rem;
+}
+
+:host /deep/ .col-1 {
+  // margin-top: 60px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #2C3446;
+}
+
+:host /deep/ .row-4 {
+  background-color: #2C3446;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+:host /deep/ .row-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+
+}
+
+:host /deep/ .row-2 .text-info {
+  font-size: 20px;
+  color: #fff;
+}
+
+:host /deep/ .row-2-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+:host /deep/ .row-2-view .text-view {
+  font-size: 20px;
+  color: #fff;
+}
+
+:host /deep/ .row-4-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.popupClose {
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  width: 3rem;
+  height: 3rem;
+  font-size: .875rem;
+  font-weight: 300;
+  border-radius: 100%;
+  background-color: #2C3446;
+  z-index: 100;
+  color: #fff;
+  line-height: 3rem;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid #008080;
+
+  &:hover,
+  &:focus {
+    border: 2px solid #2C3446;
+    background-color: #008080;
+    outline: 0;
+  }
+}
+
+:host /deep/ .onSubmitButtom {
+  margin-top: 5px;
+  position: absolute;
+  top: 24rem;
+  width: 6rem;
+  height: 2rem;
+  font-size: .875rem;
+  font-weight: 300;
+  border: 3px solid #2C3446;
+  border-radius: 5%;
+  background-color: #2C3446;
+  z-index: 100;
+  color: #fff;
+  line-height: 2rem;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    border: 3px solid #2C3446;
+    background-color: #008080;
+    outline: 0;
+  }
+}
+
+:host /deep/ .formName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  background-color: #2C3446;
+
+  p {
+    font-size: 20px;
+  }
+}

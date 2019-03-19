@@ -1,0 +1,96 @@
+.row{
+    position: absolute;
+    justify-content: center;
+    width: 95%;
+    height: 95%;
+    padding: 2rem;
+    background-color: #008080;
+    border-radius: 2%;
+    border: 5px solid #2C3446;
+}
+.modal-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.75;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+.btn{
+    margin-top: 5px;
+    top: 24rem;
+    width: 6rem;
+    height: 2rem;
+    font-size: .875rem;
+    font-weight: 300;
+    border: 3px solid #2C3446;
+    border-radius: 5%;
+    background-color: #2C3446;
+    z-index: 100;
+    color: #fff;
+    line-height: 2rem;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+  
+    &:hover,
+    &:focus {
+      border: 3px solid #2C3446;
+      background-color: #008080;
+      outline: 0;
+    }
+  }
+
+.row{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.table{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+    margin-top: 40px;
+}
+form {
+    width: 1000px;
+}
+input {
+    width: 150px;
+    height: 30px;
+}
+.button-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;  
+}
+.conteiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+}
+.conteiner-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15PX;
+    padding: 0 15px 0;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    justify-items: center;
+    padding: 0 15px 0 15px;
+}
+.dropdown{
+    position: absolute;
+    background: #888;
+    display: grid;
+    margin: 53px 0 0 80px;
+}

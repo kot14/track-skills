@@ -1,0 +1,170 @@
+<div class="table-title">
+  <div class="table-content">
+    <div class="table-header">
+      <div class="btn-create" (click)="addModal()" href="#popup">Create User</div>
+      <div class="search container">
+        <input class="search input" type="text" placeholder="Search.." [(ngModel)]="searchText" (input)="searchLine($event)">
+      </div>
+    </div>
+    <table class="table-fill">
+      <thead>
+        <tr>
+          <!-- <th class="text-left"><h1>Id</h1></th> -->
+          <th class="text-left">
+            <h1>Name</h1>
+          </th>
+          <th class="text-left">
+            <h1>Email</h1>
+          </th>
+          <th class="text-left">
+            <h1>Role</h1>
+          </th>
+          <th class="text-left">
+            <h1>Options</h1>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of pagedItems; let i=index;">
+          <!--  -->
+          <!-- <td class="text-left" *ngFor="let item of userId; let i = index"></td> -->
+          <td class="text-left">{{user.value.name}}</td>
+          <td class="text-left">{{user.value.email}}</td>
+          <td class="text-left">{{user.value.role}}</td>
+          <td class="text-left">
+            <div class="button-td">
+              <button class="btn" (click)="viewModal(user)">View</button>
+              <button class="btn" (click)="editModal(user)">Edit</button>
+              <button class="btn" (click)="deleteModal(user)">Delete</button>
+            </div>
+          </td>
+        </tr>
+        <div *ngIf="isTrue">
+          <app-modal-window>
+            <div class="col-1">
+              <div class="row-2-view">
+                <p class="text-view">Name</p>
+              </div>
+              <div class="row-4">
+                <input type="text" [ngModel]="dataUser.value.name" [disabled]="isTrue" class="Input-view">
+              </div>
+              <div class="row-2-view">
+                <p class="text-view">Email</p>
+              </div>
+              <div class="row-4">
+                <input type="text" [ngModel]="dataUser.value.email" [disabled]="isTrue" class="Input-view">
+              </div>
+              <div class="row-2-view">
+                <p class="text-view">Role</p>
+              </div>
+              <div class="row-4">
+                <input type="text" [ngModel]="dataUser.value.role" [disabled]="isTrue" class="Input-view">
+              </div>
+            </div>
+          </app-modal-window>
+        </div>
+        <div *ngIf="edditUserIsTrue">
+          <app-modal-window>
+            <form [formGroup]="formUserGroup">
+              <!-- <div class="formName">
+              <p class="textFormName"> Edit User</p>
+            </div> -->
+              <div class="col-1">
+                <div class="row-2">
+                  <p class="text-info">Name</p>
+                </div>
+                <div class="row-4">
+                  <input type="text" [ngModel]="dataUser.value.name" formControlName="name" class="InputControl">
+                </div>
+                <div class="row-2">
+                  <p class="text-info">Email</p>
+                </div>
+                <div class="row-4">
+                  <input type="text" [ngModel]="dataUser.value.email" formControlName="email" class="InputControl">
+                </div>
+                <div class="row-2">
+                  <p class="text-info">Role</p>
+                </div>
+                <div class="row-4">
+                  <input type="text" [ngModel]="dataUser.value.role" formControlName="role" class="InputControl">
+                </div>
+                <div class="row-4-button">
+                  <a (click)="onEdit()" class="onSubmitButtom">Save</a>
+                </div>
+              </div>
+            </form>
+          </app-modal-window>
+        </div>
+        <div *ngIf="addUsersIsTrue">
+          <app-modal-window>
+            <form [formGroup]="formUserGroup">
+              <!-- <div class="formName">
+              <p class="textFormName"> Add User</p>
+            </div> -->
+              <div class="col-1">
+                <!-- <div class="row-4">
+                          <input type="text" formControlName="id" class="InputControl" placeholder="id">
+                      </div> -->
+                <div class="row-2">
+                  <p class="text-info">Name</p>
+                </div>
+                <div class="row-4">
+                  <input type="text" formControlName="name" class="InputControl" placeholder="name">
+                </div>
+                <div class="row-2">
+                  <p class="text-info">Email</p>
+                </div>
+                <div class="row-4">
+                  <input type="text" formControlName="email" class="InputControl" placeholder="email">
+                </div>
+                <div class="row-2">
+                  <p class="text-info">Role</p>
+                </div>
+                <div class="row-4">
+                  <input type="text" formControlName="role" class="InputControl" placeholder="role">
+                </div>
+                <div class="row-4-button">
+                  <a (click)="onSubmit()" class="onSubmitButtom">Save</a>
+                </div>
+              </div>
+            </form>
+          </app-modal-window>
+        </div>
+      </tbody>
+    </table>
+    <div *ngIf="pager.pages && pager.pages.length" class="paginations">
+      <div class="pagination-back">
+        <button class="button-pagination-first" [disabled]="pager.currentPage === 1 " (click)="setPage(1)">
+          <a>First</a>
+        </button>
+        <button class="button-pagination" [disabled]="pager.currentPage === 1 " (click)="setPage(pager.currentPage - 1)">
+          <a>&laquo;</a>
+        </button>
+        <button class="button-pagination" *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}"
+          (click)="setPage(page)">
+          <a>{{page}}</a>
+        </button>
+        <button class="button-pagination" [disabled]="pager.currentPage === pager.totalPages" (click)="setPage(pager.currentPage + 1)">
+          <a>&raquo;</a>
+        </button>
+        <button class="button-pagination-last" [disabled]="pager.currentPage === pager.totalPages" (click)="setPage(pager.totalPages)">
+          <a>Last</a>
+        </button>
+        <select
+        [ngModel]="selection"
+        (ngModelChange)="onChange($event, selection)">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5" selected>5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
